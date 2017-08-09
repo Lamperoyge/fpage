@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Front page</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <body onload="updateClock(); setInterval('updateClock()', 1000 )" >
+      <div class="container">
+          <script type="text/javascript">
+              baseUrl = "https://widgets.cryptocompare.com/";
+              var scripts = document.getElementsByTagName("script");
+              var embedder = scripts[ scripts.length - 1 ];
+              var cccTheme = {"General":{"background":"#transparent","borderColor":"transparent"},"Header":{"background":"transparent","color":"white"},"Followers":{"background":"transparent","color":"white","borderColor":"transparent","counterBorderColor":"transparent","counterColor":"transparent"},"Data":{"priceColor":"white","infoLabelColor":"white","infoValueColor":"white"},"Chart":{"fillColor":"transparent"}};
+              (function (){
+              var appName = encodeURIComponent(window.location.hostname);
+              if(appName==""){appName="local";}
+              var s = document.createElement("script");
+              s.type = "text/javascript";
+              s.async = true;
+              var theUrl = baseUrl+'serve/v2/coin/chart?fsym=BTC&tsym=USD&period=1W';
+              s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+              embedder.parentNode.appendChild(s);
+              })();
+          </script>
+
+
+
+          <span id="clock">&nbsp;</span>
+
+            <div class="icon">
+                <img class="icon icons8-Fsociety-Mask" width="48" height="48" src="data:image/png;base64,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">
+
+                </div>
+      </div>
+      <script src="time.js"></script>
+    </body>
+  </head>
+</html>

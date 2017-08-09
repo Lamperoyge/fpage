@@ -1,0 +1,37 @@
+body {
+  background-image: url('mkbhd.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+#clock{
+    font-family: 'Open Sans', sans-serif;
+    font-size:5em;
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    right: 0;
+    color:#fff;
+    padding:7px 50px;
+    top:100px;
+    left:100px;
+    border:1px solid white;
+}
+
+.icon {
+    position:absolute;
+    width:auto;
+    height:auto;
+    bottom:20px;
+    right:25%;
+    left:50%;
+    margin-left:-130px;
+}
